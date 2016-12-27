@@ -6,52 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Guía de viajes </title>
     <style>
-        header {
-            background-color: cornflowerblue;
-            font-family: cursive;
-            text-align: left;
-            padding: 5px;
-
+        body {
+            background-color: gainsboro;
         }
 
-        header h1{
+        header {
+            background-color: cornflowerblue;
+            font-family: serif;
+            text-align: center;
+            padding: 0px;
+        }
+
+        header h1 {
             color: white;
             font-size: 200%;
         }
-        header h2{
-            color: orange;
+
+        header h2 {
+            color: yellow;
             font-size: 150%;
         }
 
-        nav{
+        nav {
             background-color: green;
-
-
         }
 
-        ul{
+        ul {
             list-style-type: none;
             overflow: hidden;
         }
 
-        li{
-            float:left;
+        li {
+            float: left;
             padding: 10px;
         }
 
-        li a{
-            color:white;
+        li a {
+            color: white;
             text-decoration: none;
         }
 
+        article {
+            border-color: black;
+            border-style: solid;
+            border-width: 3px;
+            background-color: white;
+            overflow: auto;
+            float: left;
+        }
+
+        .miniatura {
+            float: left;
+            margin: 10px;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Guía de viajes </h1>
-        <h2>Los viajes más extraordinarios</h2>
-    </header>
+        <h2>Los viajes más extraordinarios</h2> </header>
     <nav>
         <ul>
             <li> <a href="index.html">Inicio</a></li>
@@ -60,7 +74,26 @@
             <li><a href="paris.html">Paris</a></li>
         </ul>
     </nav>
-
+    <article>
+        <h1>Singapur</h1>
+        <p><img src="imagenes/SingapurNoche200x132.jpg" class="miniatura">Singapur formó parte de la Malasia británica durante casi dos siglos. Fue gobernada por el Sultanato de Johor. En 1819, los británicos llegaron a la isla y construyeron un puerto y una colonia...<a href="singapur.html">seguir leyendo</a> </p>
+    </article>
+    <article>
+        <h1>Nueva York</h1>
+        <p><img src="imagenes/New_York_NYC200x100.jpg" class="miniatura">El turismo es una de las principales actividades económicas de la ciudad, ya que por ella pasan 40 millones de turistas nacionales y extranjeros cada año.79 Entre los principales destinos se encuentran el edificio Empire State, la isla Ellis, las producciones teatrales de Broadway, museos como el Metropolitano de Arte,....<a href="nuevayork.html">seguir leyendo</a> </p>
+    </article>
+    <article>
+        <h1>Paris</h1>
+        <p><img src="imagenes/Paris_la_torre_eifel200x132.jpg" class="miniatura">El turismo es una de las principales actividades económicas de la ciudad, ya que por ella pasan 40 millones de turistas nacionales y extranjeros cada año.79 Entre los principales destinos se encuentran el edificio Empire State, la isla Ellis, las producciones teatrales de Broadway, museos como el Metropolitano de Arte,....<a href="paris.html">seguir leyendo</a> </p>
+    </article>
+    <article>
+        <img src="imagenes/Mapa-Mundi.jpg" usemap="#mapaciudades">
+        <map name="mapaciudades">
+            <area shape="circle" coords="168,125,10" href="nuevayork.html" title="vamos a Nueva York">
+            <area shape="rect" coords="176,123,251,134" href="nuevayork.html" title="a Nueva York nos vamos">
+            <area shape="rect" coords="251,93,309,105" href="paris.html" title="vamos a PARIS!!">
+        </map>
+    </article>
 </body>
 
 </html>
