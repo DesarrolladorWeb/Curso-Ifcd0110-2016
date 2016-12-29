@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Mapa de Vigo</h1>
+    <h2>API Google Maps</h2>
+    <div id="map" style="width:400px;height:300px;background:yellow"></div>
+    <script>
+        function miMapa() {
+            var centro= new google.maps.LatLng(42.2355647,-8.7011239);
+            var mapOptions = {
+                center: centro,
+                zoom: 17,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            
+            var marker = new google.maps.Marker({
+                position: centro,
+                //animation:google.maps.Animation.BOUNCE,
+                icon: 'imagenes/favicon-32x32.png'
+                });
+            marker.setMap(map);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=miMapa"></script>
+    <br>
+    <p></p>
+    <h2>iframe de Google Maps</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8569.249425981103!2d-8.717547213036772!3d42.235395265260394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1483004045295" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+</body>
+
+</html>
