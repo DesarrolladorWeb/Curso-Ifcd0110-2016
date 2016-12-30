@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+   
+        </title>
+        <style>
+            body {
+                background-color: white;
+                
+            }
+            
+            
+            #cabra{
+                color: white;
+                background-image: url(imagenes/cabra.jpg);
+                background-color:gainsboro;
+                background-repeat: repeat-x;
+                background-position: top left; 
+                padding:50px;
+                margin:50px;
+                
+                max-width: 400px;               
+                overflow:hidden;
+                border-left: solid 5px orange;                           
+                border-radius: 0px;
+                display:block;
+                                
+            }
+            
+            #rojo{
+                background-color: red;
+                position: relative;
+                width:200px;
+                height:200px;
+                z-index: 10;
+                opacity: 0.5;
+                
+            }
+            
+            #verde{
+                background-color: green;
+                width:200px;
+                height:200px;
+                position: relative;
+                left: 50px;
+                top: 50px;
+                z-index: 20;
+                opacity: 0.5;
+                
+            }
+            
+            #azul
+            {
+                background-color: blue;
+                width:200px;
+                height:200px;
+                position: relative;
+                left: 50px;
+                top: 50px;
+                z-index: 30;
+                opacity: 0.5;
+            }
+            
+
+            
+        </style>
+        
+    </head>
+    <body>
+        <div id="rojo">
+        
+        </div>
+        <div id="verde">
+        
+        </div>
+        <div id="azul">
+        
+        </div>
+        <script>
+            function muestra(){
+                document.getElementById("cabra").style.display="block";
+            }
+            function oculta(){
+                document.getElementById("cabra").style.display="none";
+            }
+        </script>
+        <a href="#" onclick="muestra();">Muestra </a>
+        <a href="#" onclick="oculta();">Oculta</a>
+        <div id="cabra">
+            <h1>Cabra</h1>
+            <p>asdfjlh</p>
+            <p>asdfjlh</p>
+            <p>asdfjlh</p>
+            <p>asdfjlh</p>
+            <p>asdfjlh</p>
+            <p>asdfjlh</p>
+            <p>asdfjlh</p>  
+        </div>
+     
+        
+        
+    </body>
+</html>
