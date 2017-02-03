@@ -7,8 +7,14 @@
         Pruebas javascript
         </title>      
         <style>
-            #texto{
+          .mal{
                 color:red;
+                border:1px solid red;
+            }
+            
+            .bien{
+                color:blue;
+                border:1px solid green;              
             }
         </style>
     </head>
@@ -29,21 +35,31 @@
             var resultado;
             resultado=a+b;        
             var aux= document.getElementById("texto");
-            aux.innerHTML="El resultado de "+a+" + " + b + " es " + resultado;       
+            aux.innerHTML="El resultado de "+a+" + " + b + " es " + resultado;
+            //aux.style.color = "green";
+                aux.classList.add("bien");
+                aux.classList.remove("mal");
             }
         function resta(a,b)
             {
             var resultado;
             resultado=a-b;       
             var aux= document.getElementById("texto");
-            aux.innerHTML="El resultado de "+a+" - " + b + " es " + resultado;       
+            aux.innerHTML="El resultado de "+a+" - " + b + " es " + resultado; 
+            //aux.style.color = "green";
+                aux.classList.add("bien");
+                aux.classList.remove("mal");
             }
         function multiplica(a,b)
             {
             var resultado;
             resultado=a*b;       
             var aux= document.getElementById("texto");
-            aux.innerHTML="El resultado de "+a+" * " + b + " es " + resultado;       
+            aux.innerHTML="El resultado de "+a+" * " + b + " es " + resultado; 
+            //aux.style.color = "green";
+                aux.classList.add("bien");
+                aux.classList.remove("mal");
+                
             }
             
         function divide(a,b)
@@ -54,12 +70,20 @@
                 resultado=a/b;       
                 var aux= document.getElementById("texto");
                 aux.innerHTML="El resultado de "+a+" / " + b + " es " + resultado; 
+                //aux.style.color = "green";
+                aux.classList.add("bien");
+                aux.classList.remove("mal");
                 }
              else
                  {
                 var aux= document.getElementById("texto");
-                aux.innerHTML="El divisor no puede ser cero";    
+                aux.innerHTML="El divisor no puede ser cero";  
+                //aux.style.color = "red";
+                aux.classList.add("mal");
+                aux.classList.remove("bien");
+                
                  }
+                console.log("Parrafo es de la clase "+aux.className);
             }
   
         
