@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+        Pruebas javascript
+        </title>      
+        <style>
+            #texto{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Pruebas javascript</h2>
+     
+        <input type="number" id="n1" value="0">
+        <input type="number" id="n2" value="0">
+    <br>
+        <button onclick="suma(parseInt(n1.value),parseInt(n2.value));">Suma</button>
+         <button onclick="resta(parseInt(n1.value),parseInt(n2.value));">Resta</button>
+        <button onclick="multiplica(parseInt(n1.value),parseInt(n2.value));">Multiplica</button>
+        <button onclick="divide(parseInt(n1.value),parseInt(n2.value));">Divide</button>
+        <p id="texto"></p>
+        <script>
+        function suma(a,b)
+            {
+            var resultado;
+            resultado=a+b;        
+            var aux= document.getElementById("texto");
+            aux.innerHTML="El resultado de "+a+" + " + b + " es " + resultado;       
+            }
+        function resta(a,b)
+            {
+            var resultado;
+            resultado=a-b;       
+            var aux= document.getElementById("texto");
+            aux.innerHTML="El resultado de "+a+" - " + b + " es " + resultado;       
+            }
+        function multiplica(a,b)
+            {
+            var resultado;
+            resultado=a*b;       
+            var aux= document.getElementById("texto");
+            aux.innerHTML="El resultado de "+a+" * " + b + " es " + resultado;       
+            }
+            
+        function divide(a,b)
+            {
+            if (b!=0)
+                {
+                var resultado;
+                resultado=a/b;       
+                var aux= document.getElementById("texto");
+                aux.innerHTML="El resultado de "+a+" / " + b + " es " + resultado; 
+                }
+             else
+                 {
+                var aux= document.getElementById("texto");
+                aux.innerHTML="El divisor no puede ser cero";    
+                 }
+            }
+  
+        
+        </script>
+  
+    </body>
+</html>
