@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+        Pruebas javascript
+        </title>      
+        <style>
+            .rojo{
+                color:red;
+            }
+            
+            .verde{
+                color:green;
+            }
+
+        </style>
+    </head>
+    <body onload="ponSemana();ponProvincias();">
+        <h3 id="numeros"></h3>
+        <script>
+           var texto="";
+           var i;
+            for (i=0;i<10;i++)
+                {
+                    if (i%2==0)
+                        {
+                        texto+="<span class='verde'>"+i+"</span>";
+                        }
+                    else
+                        {
+                         texto+="<span class='rojo'>"+i+"</span>";   
+                        }
+                    
+                    //console.log(texto);
+                }          
+            document.getElementById("numeros").innerHTML= texto;
+        
+        </script>
+        
+        <button onclick="ponDia();">
+        Día de la semana
+        </button>
+        <p id="escribeAqui"></p>
+        <!--
+        <button onclick="ponSemana();">
+        Todos los días
+        </button>
+        -->
+        
+        <p id="escribeSemana"></p>
+        
+        <script>
+            var diaSemana=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];          
+                  
+            var numeroDia=0;
+            
+            function ponDia()
+            { 
+            var parraf=document.getElementById("escribeAqui");
+            
+           parraf.innerHTML=diaSemana[numeroDia];           
+              
+            if ((numeroDia==5)||(numeroDia==6)) //sábado o domingo
+                {
+                    parraf.classList.add("rojo");
+                    parraf.classList.remove("verde");
+                }
+            else
+                {
+                   parraf.classList.add("verde"); 
+                   parraf.classList.remove("rojo");
+                }    
+            //console.log("Número de día: "+numeroDia);    
+            
+            ++numeroDia;   
+               
+            if (numeroDia==diaSemana.length) numeroDia=0;
+            }
+            
+            function ponSemana()
+            {
+              var texto2="<select name='semana'>";
+              var j; 
+                    
+              for (j in diaSemana)
+                  {
+                      texto2+="<option value='"+j+"'>"+diaSemana[j]+"</option>";
+                      //console.log(texto2);
+                  }              
+              texto2+="</select>";  document.getElementById("escribeSemana").innerHTML= texto2;    
+            }
+            
+
+            
+    function ponProvincias()
+    {
+        var provincias = ['Álava','Albacete','Alicante','Almería','Asturias','Ávila','Badajoz','Barcelona','Burgos','Cáceres',
+'Cádiz','Cantabria','Castellón','Ciudad Real','Córdoba','La Coruña','Cuenca','Gerona','Granada','Guadalajara',
+'Guipúzcoa','Huelva','Huesca','Islas Baleares','Jaén','León','Lérida','Lugo','Madrid','Málaga','Murcia','Navarra',
+'Orense','Palencia','Las Palmas','Pontevedra','La Rioja','Salamanca','Segovia','Sevilla','Soria','Tarragona',
+'Santa Cruz de Tenerife','Teruel','Toledo','Valencia','Valladolid','Vizcaya','Zamora','Zaragoza'];
+        var texto2="<select name='provincia'>";
+        var j;
+        //for (j=0;j<provincias.length;j++)
+        for (j in provincias)
+            {
+                texto2+="<option value='"+j+"'>"+provincias[j]+"</option>";
+            }
+        texto2+="</select>";
+        document.getElementById("escribeSemana").innerHTML+=texto2;
+        console.log(texto2);
+
+    }
+            
+            
+        </script>    
+    </body>
+</html>
